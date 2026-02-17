@@ -5,6 +5,7 @@ import Skills from './components/Skills'
 import Hero from './Hero'
 import Contact from './components/Contact'
 import About from './components/About'
+import Project from './components/Project'
 
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
       <Hero darkMode={darkMode} />
       <About darkMode={darkMode} />
       <Skills darkMode={darkMode} />
+      <Project darkMode={darkMode} />
       <Contact darkMode={darkMode} />
     </div>
   )
