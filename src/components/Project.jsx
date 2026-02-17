@@ -18,7 +18,6 @@ const Project = ({ darkMode }) => {
       title: "Innovate",
       desc: "Modern educational web app with clean UI and structured architecture.",
       tags: ["React", "Tailwind", "JavaScript"],
-      
       live: "https://inovet.vercel.app/",
       image: proj1,
     },
@@ -27,7 +26,6 @@ const Project = ({ darkMode }) => {
       title: "Shopping",
       desc: "Modern educational web app with clean UI and structured architecture.",
       tags: ["React", "Redux", "JavaScript"],
-      
       live: "https://gggg-gamma-silk.vercel.app/",
       image: proj3,
     },
