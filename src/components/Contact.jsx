@@ -67,7 +67,7 @@ ${message}
                         <img
                             src={cm}
                             alt="Contact"
-                            className="max-w-sm w-full object-contain"
+                            className="w-sm md:w-full object-contain"
                         />
                     </motion.div>
 
@@ -79,8 +79,8 @@ ${message}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                         className={`p-8 rounded-2xl shadow-xl backdrop-blur-lg border ${darkMode
-                                ? "bg-gray-800/80 border-gray-700"
-                                : "bg-white/80 border-gray-200"
+                            ? "bg-gray-800/80 border-gray-700"
+                            : "bg-white/80 border-gray-200"
                             }`}
                     >
                         <div className="grid sm:grid-cols-2 gap-4 mb-4">

@@ -33,7 +33,7 @@ const Hero = ({ darkMode }) => {
           <h1 className={`text-4xl sm:text-5xl font-bold mb-4 ${
             darkMode ? "text-white" : "text-gray-900"
           }`}>
-            Hi, I'm{" "}
+           I'm{" "}
             <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
               Abu Sayed Saimum
             </span>
