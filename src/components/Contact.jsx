@@ -1,33 +1,23 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import cm from "../assets/contact.png";
 
 const Contact = ({ darkMode }) => {
+    const [success, setSuccess] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const formData = new FormData(e.target);
-        const fname = formData.get("firstname");
-        const lname = formData.get("lastname");
-        const email = formData.get("email");
-        const phone = formData.get("phone");
-        const message = formData.get("message");
+        // Show success message
+        setSuccess(true);
 
-        const whatsappNumber = "8801566068310";
+        // Reset form
+        e.target.reset();
 
-        const text = `
-Hello! 👋
-Name: ${fname} ${lname}
-Email: ${email}
-Phone: ${phone}
-
-Message:
-${message}
-    `;
-
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-
-        window.open(whatsappUrl, "_blank");
+        // Hide message after 4 seconds
+        setTimeout(() => {
+            setSuccess(false);
+        }, 4000);
     };
 
     return (
@@ -37,25 +27,27 @@ ${message}
                 }`}
         >
             <div className="max-w-6xl mx-auto px-6">
-
                 {/* Heading */}
                 <div className="text-center mb-16">
-                    <h2 className={`text-4xl font-bold ${darkMode ? "text-white" : "text-gray-800"
-                        }`}>
+                    <h2
+                        className={`text-4xl font-bold ${darkMode ? "text-white" : "text-gray-800"
+                            }`}
+                    >
                         Get In{" "}
                         <span className="bg-gradient-to-r from-orange-500 to-amber-500 bg-clip-text text-transparent">
                             Touch
                         </span>
                     </h2>
-                    <p className={`mt-4 ${darkMode ? "text-gray-400" : "text-gray-600"
-                        }`}>
+
+                    <p
+                        className={`mt-4 ${darkMode ? "text-gray-400" : "text-gray-600"
+                            }`}
+                    >
                         Let’s build something amazing together.
                     </p>
                 </div>
 
-                {/* Content */}
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-
                     {/* Image */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -79,8 +71,8 @@ ${message}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                         className={`p-8 rounded-2xl shadow-xl backdrop-blur-lg border ${darkMode
-                            ? "bg-gray-800/80 border-gray-700"
-                            : "bg-white/80 border-gray-200"
+                                ? "bg-gray-800/80 border-gray-700"
+                                : "bg-white/80 border-gray-200"
                             }`}
                     >
                         <div className="grid sm:grid-cols-2 gap-4 mb-4">
@@ -128,15 +120,28 @@ ${message}
                             whileHover={{ scale: 1.03 }}
                             whileTap={{ scale: 0.95 }}
                             type="submit"
-                            className="w-full py-3 font-semibold text-white rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 shadow-lg hover:shadow-orange-500/30 transition-all"
+                            className="w-full py-3 font-semibold text-white rounded-xl 
+              bg-gradient-to-r from-orange-500 to-amber-500 
+              shadow-lg hover:shadow-orange-500/30 transition-all"
                         >
-                            Send Message
+                            {success ? "Message Sent ✓" : "Send Message"}
                         </motion.button>
+
+                        {/* Success Message */}
+                        {success && (
+                            <motion.p
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                className="mt-4 text-green-500 font-medium text-center"
+                            >
+                                ✅ Thank you! Your message has been sent successfully.
+                            </motion.p>
+                        )}
                     </motion.form>
                 </div>
             </div>
 
-            {/* Reusable Input Styling */}
+            {/* Input Styling */}
             <style>
                 {`
           .input-style {

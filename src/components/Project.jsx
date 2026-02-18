@@ -68,7 +68,7 @@ const Project = ({ darkMode }) => {
               className="group relative rounded-3xl overflow-hidden transition-all duration-500 hover:-translate-y-3"
             >
               {/* Gradient Border Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-yellow-500 opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 blur-xl transition duration-500"></div>
 
               <div
                 className={`relative rounded-3xl overflow-hidden backdrop-blur-xl border transition-all duration-500

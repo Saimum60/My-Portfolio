@@ -55,8 +55,8 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <span className={`text-xl font-bold ${color.textPrimary}`}>
-              Portfolio
+            <span className={`text-xl font-bold ${color.textPrimary} `}>
+              Saimum.Dev
             </span>
           </motion.a>
 
