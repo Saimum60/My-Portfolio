@@ -37,9 +37,7 @@ const About = ({ darkMode }) => {
                         <img
                             src={ab}
                             alt="About Image"
-                            className="w-full h-auto object-contain
-      transition-all duration-500
-      drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+                            className="w-full h-auto object-contain transition-all duration-500 drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
                             data-aos="zoom-in"
                             data-aos-delay="400"
                         />
